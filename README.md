@@ -1,6 +1,11 @@
 # Project #2
 
-Team Members: Lorenzo Bartolo, Pritesh Kumar, Jordan Lapid, Ruth San Antonio.
+## Team Members
+
+- [Lorenzo Bartolo](<https://github.com/Bigg-Iron>)
+- [Pritesh Kumar](<https://github.com/priteshkumar>)
+- [Jordan Lapid](<https://github.com/jordanlapid>)
+- [Ruth San Antonio](<https://github.com/rsantonio>)
 
 ## Brainstorming
 
