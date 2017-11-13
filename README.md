@@ -37,6 +37,10 @@
 
 - Front-end [JavaScript frameworks](<https://github.com/collections/front-end-javascript-frameworks>)
 
+- Software in Science [Collection](<https://github.com/collections/software-in-science>)
+
+- Social Impact [Collection](<https://github.com/collections/social-impact>)
+
 ## Metrics
 
 - Concept
