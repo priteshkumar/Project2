@@ -4,11 +4,19 @@ Team Members: Lorenzo Bartolo, Pritesh Kumar, Jordan Lapid, Ruth San Antonio.
 
 ## Brainstorming
 
-- D3.js for data visualization
-- Ember.js Framework
-- Google Basecamp for Project Management
-- Google Material Design
-- Materialize CSS Framework
+- D3.js for [data visualization](<https://d3js.org/>)
+
+- This repository provides state of the art (SoTA) results for all machine learning problems: <https://github.com/RedditSota/state-of-the-art-result-for-machine-learning-problems>
+
+- Frappe: [Simple, responsive, modern SVG Charts with zero dependencies](<https://github.com/frappe/charts>)
+
+- Django: [Python Web framework](<https://github.com/django/django>)
+
+- Google's [Material Design](<https://material.io/guidelines/#>)
+
+- Materialize, [a CSS Framework based on Google's Material Design principles](<http://materializecss.com/>)
+
+- Ember.js: [A JavaScript framework for creating ambitious web applications](<https://www.emberjs.com/>)
 
 ## Metrics
 
