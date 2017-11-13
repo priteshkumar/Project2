@@ -18,6 +18,20 @@ Team Members: Lorenzo Bartolo, Pritesh Kumar, Jordan Lapid, Ruth San Antonio.
 
 - Ember.js: [A JavaScript framework for creating ambitious web applications](<https://www.emberjs.com/>)
 
+- Census Reporter is a Knight News Challenge-funded project to make it easier for journalists to write stories using information from the U.S. Census bureau. [Census Reporter](<https://github.com/censusreporter/censusreporter>)
+
+- Data and code behind the stories and interactives at [FiveThirtyEight](<https://github.com/fivethirtyeight/data>)
+
+- Sites, apps, and tools built by governments across the world to make government work better, together. [Government Apps](<https://github.com/collections/government>)
+
+- Nasa's web based [mission control framework.](<https://nasa.github.io/openmct/>)
+
+- Open Data Policy — [Managing Information as an Asset](<https://github.com/project-open-data/project-open-data.github.io>)
+
+- The home of the [U.S. Government’s open data](<https://www.data.gov/>)
+
+- Front-end [JavaScript frameworks](<https://github.com/collections/front-end-javascript-frameworks>)
+
 ## Metrics
 
 - Concept
@@ -59,18 +73,3 @@ Team Members: Lorenzo Bartolo, Pritesh Kumar, Jordan Lapid, Ruth San Antonio.
 - Use an existing public dataset to power the database
 
 - Create a migration strategy for sharing data across team members.
-
-## Project Management Tools
-
-- [Trello](https://trello.com/)
-- [Google Basecamp](https://basecamp.com/)
-- [Asana](https://asana.com/)
-- [Trello](https://freedcamp.com/)
-
-## Project Resources
-
-- [D3.js](https://d3js.org/)
-- [Materialize CSS Framework](http://materializecss.com/)
-- [Bootstrap](http://getbootstrap.com/)
-- [jQuery](https://jquery.com/)
-- [Postman](https://www.getpostman.com/)
