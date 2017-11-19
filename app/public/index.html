@@ -1,30 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bucket List</title>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
 </head>
+
 <body>
 
-    <nav class="white" role="navigation">
-        <div class="nav-wrapper">
-          <a href="#!" class="brand-logo"><i class="large material-icons">airplanemode_on</i>Bucket List</a>
-          <ul class="right hide-on-med-and-down">
-              <li><a href="#">Login</a></li>
-          </ul>
-          <ul id="nav-mobile" class="side-nav">
-              <li><a href="#">Login</a></li>
-            </ul>
-            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-          </div>
-        </div>
-      </nav>
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">
+        <i class="large material-icons">airplanemode_on</i>Bucket List</a>
+      <ul class="right hide-on-med-and-down">
+        <li>
+          <a href="#">Login</a>
+        </li>
+      </ul>
+      <ul id="nav-mobile" class="side-nav">
+        <li>
+          <a href="#">Login</a>
+        </li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse">
+        <i class="material-icons">menu</i>
+      </a>
+    </div>
+    </div>
+  </nav>
 
   <!-- <nav class="white" role="navigation">
     <div class="nav-wrapper container">
@@ -43,7 +52,8 @@
   <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
       <div class="container">
-        <br><br>
+        <br>
+        <br>
         <h1 class="header center teal-text text-lighten-2">Bucket List</h1>
         <div class="row center">
           <h5 class="header col s12 light">A creative way to manage your Bucket List</h5>
@@ -51,11 +61,14 @@
         <div class="row center">
           <a href="#" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>
         </div>
-        <br><br>
+        <br>
+        <br>
 
       </div>
     </div>
-    <div class="parallax"><img src="background1.jpg" alt="Unsplashed background img 1"></div>
+    <div class="parallax">
+      <img src="background1.jpg" alt="Unsplashed background img 1">
+    </div>
   </div>
 
 
@@ -73,44 +86,54 @@
           </div>
         </div> -->
 
+      <div class="col s12 m6">
+        <div class="icon-block">
+          <h2 class="center brown-text">
+            <i class="material-icons">flash_on</i>
+          </h2>
+          <h5 class="center">Google Cloud Vision</h5>
+
+          <h5 class="light">Drag an image to analyze it!</h5>
+        </div>
+      </div>
+
+      <div class="row">
         <div class="col s12 m6">
-          <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
-            <h5 class="center">Google Cloud Vision</h5>
-
-            <h5 class="light">Drag an image to analyze it!</h5>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col s12 m6">
-            <div class="card">
-              <div class="card-image">
-                <img src="cardImage.jpg">
-                <span class="card-title">Your Destination</span>
-                <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
-              </div>
-              <div class="card-content">
-                <p>Yosemite National Park is in California’s Sierra Nevada mountains. It’s famed for its giant, ancient sequoia trees, and for Tunnel View, the iconic vista of towering Bridalveil Fall and the granite cliffs of El Capitan and Half Dome.</p>
-              </div>
+          <div class="card">
+            <h2 class="center brown-text">
+              <i class="material-icons">add_a_photo</i>
+            </h2>
+            <div class="card-image">
+              <img src="cardImage.jpg">
+              <span class="card-title">Your Destination</span>
+              <a class="btn-floating halfway-fab waves-effect waves-light red">
+                <i class="material-icons">add</i>
+              </a>
             </div>
-            <ul class="collapsible" data-collapsible="accordion">
-                <li>
-                  <div class="collapsible-header">
-                    <i class="material-icons">place</i>
-                    Plan your trip
-                    <span class="badge">1</span></div>
-                  <div class="collapsible-body">
-                    <p>Address: California</p>
-                      <p>Area: 1,169 mi²</p>
-                      <p> October 1, 1890</p>
-                      <p>Phone: (209) 372-0200</p>
-                    <p>Management: National Park Service</p>
-                  </div>
-                </li>
-              </ul>
+            <div class="card-content">
+              <p>Yosemite National Park is in California’s Sierra Nevada mountains. It’s famed for its giant, ancient sequoia
+                trees, and for Tunnel View, the iconic vista of towering Bridalveil Fall and the granite cliffs of El Capitan
+                and Half Dome.</p>
+            </div>
           </div>
+          <ul class="collapsible" data-collapsible="accordion">
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">place</i>
+                Plan your trip
+                <span class="badge">1</span>
+              </div>
+              <div class="collapsible-body">
+                <p>Address: California</p>
+                <p>Area: 1,169 mi²</p>
+                <p> October 1, 1890</p>
+                <p>Phone: (209) 372-0200</p>
+                <p>Management: National Park Service</p>
+              </div>
+            </li>
+          </ul>
         </div>
+      </div>
 
 
     </div>
@@ -125,7 +148,9 @@
         </div>
       </div>
     </div>
-    <div class="parallax"><img src="background2.jpg" alt="Unsplashed background img 2"></div>
+    <div class="parallax">
+      <img src="background2.jpg" alt="Unsplashed background img 2">
+    </div>
   </div>
 
   <div class="container">
@@ -133,9 +158,16 @@
 
       <div class="row">
         <div class="col s12 center">
-          <h3><i class="mdi-content-send brown-text"></i></h3>
+          <h3>
+            <i class="mdi-content-send brown-text"></i>
+          </h3>
           <h4>Contact Us</h4>
-          <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+          <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque
+            tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a
+            sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam
+            eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum
+            sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum
+            primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
         </div>
       </div>
 
@@ -151,7 +183,9 @@
         </div>
       </div>
     </div>
-    <div class="parallax"><img src="background3.jpg" alt="Unsplashed background img 3"></div>
+    <div class="parallax">
+      <img src="background3.jpg" alt="Unsplashed background img 3">
+    </div>
   </div>
 
   <footer class="page-footer teal">
@@ -163,20 +197,27 @@
 
 
         </div>
-     
+
         <div class="col l3 s12">
           <h5 class="white-text">Connect With Us!</h5>
           <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li>
+              <a class="white-text" href="#!">Link 1</a>
+            </li>
+            <li>
+              <a class="white-text" href="#!">Link 2</a>
+            </li>
+            <li>
+              <a class="white-text" href="#!">Link 3</a>
+            </li>
           </ul>
         </div>
       </div>
     </div>
     <div class="footer-copyright">
       <div class="container">
-      Made with <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+        Made with
+        <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
       </div>
     </div>
   </footer>
@@ -187,5 +228,6 @@
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
 
-  </body>
+</body>
+
 </html>
