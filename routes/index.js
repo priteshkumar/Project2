@@ -4,6 +4,37 @@ var expressValidator = require('express-validator');
 var passport = require('passport');
 var bcrypt = require('bcrypt');
 const saltRounds = 10;
+var db = require("../db.js");
+
+
+//Define 5 API Routes
+//Post to Bucketlist Table 
+router.post("/api/new", function(req, res, next){
+	const title = req.body.title;
+	const info = req.body.info;
+	const id = req.user.user_id;
+	db.query("INSERT INTO bucketlist (title, info, id) VALUES (?,?,?)", [title, info, id], function(error, results, fields){
+		if (error) throw error;
+		res.send(results);
+	})
+});
+
+//Get all from bucketlist table
+
+router.get("/api/all", function(req, res , next){
+	db.query("SELECT * FROM bucketlist", function(error, results, fields){
+		res.json(results);
+	})
+});
+
+//Delete from bucketlist table
+
+router.delete("/api/delete", function(req, res, next){
+	const id = req.body.id;
+	db.query("DELETE FROM bucketlist WHERE id = ?", [id], function(error , results, fields){
+		res.json(results);
+	})
+});
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -65,14 +96,13 @@ router.post('/register', function(req, res, next) {
 		const email = req.body.email;
 		const password = req.body.password;
 
-		const db = require("../db.js")
+
 
 		bcrypt.hash(password, saltRounds, function(err, hash) {
 			db.query("INSERT INTO users (username,email,password) VALUES (?, ?, ?)", [username, email, hash], function(error, results, fields){
 				if(error) throw error;
 				db.query("SELECT LAST_INSERT_ID() as user_id", function(error, results, fields){
 					if(error) throw error;
-
 					const user_id = results[0];
 					console.log(results[0]);
 					req.login(user_id, function(error){
