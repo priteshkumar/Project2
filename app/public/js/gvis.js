@@ -8,7 +8,8 @@ var seatgeek_appid = "184216165545f82715a9ce5164f97b59bae40a1a698dfdf2a353e844f9
 var SEATGEEK_PERFORMER_URL = "https://api.seatgeek.com/2/performers?";
 var SEATGEEK_GEOLOCATION_URL = "https://api.seatgeek.com/2/";
 var imgInfo = {};
-
+var gSearchres = {};
+var seatGeekres = {};
 
 $(function () {
     $('#fileform').on('submit', uploadFiles);
@@ -21,6 +22,7 @@ function uploadFiles(event) {
     event.preventDefault(); // Prevent the default form post
 
     // Grab the file and asynchronously convert to base64.
+
     var file = $('#fileform [name=fileField]')[0].files[0];
     var reader = new FileReader();
     reader.onloadend = processFile;
@@ -88,6 +90,10 @@ function parseResults(data) {
 
 
     var imgDesc = {};
+    
+    //gvisinfo  object use this for parsing gvis image info and updating ui
+    var imgInfo = Object.assign({},data.responses[0]);
+    console.log(imgInfo.labelAnnotations);
 
     var labels = data.responses[0].labelAnnotations;
     for (var i = 0; i < labels.length; i++) {
@@ -124,9 +130,9 @@ function parseResults(data) {
 
     console.log(imgDesc);
 
-    var dbImgdesc = Object.assign({}, imgDesc);
-    console.log(dbImgdesc);
-    imgInfo = dbImgdesc;
+    //var dbImgdesc = Object.assign({}, imgDesc);
+    //console.log(dbImgdesc);
+    //imgInfo = dbImgdesc;
 
     var searchReq = {};
     /* GET https://www.googleapis.com/customsearch/v1?key=INSERT_YOUR_API_KEY&cx=017576662512468239146:omuauf_lfve&q=lectures*/
@@ -149,8 +155,16 @@ function parseResults(data) {
 
 
 function displaySearchResults(data) {
-    console.log("searchres: " + data);
+    //console.log("searchres: " + data);
+    //gSearchres = Object.assign({},data.items);
     var searchres = data.items;
+    console.log(searchres);
+
+    //object for storing google custom search results
+    gSearchres.items = searchres;
+
+
+    console.log(gSearchres.items);
     for (var i = 0; i < searchres.length; i++) {
         console.log(searchres[i].displayLink);
         console.log(searchres[i].formattedUrl);
@@ -162,7 +176,7 @@ function displaySearchResults(data) {
 
         if (imgInfo.landmark !== undefined && imgInfo.landmark !== null) {
             var queryUrl = SEATGEEK_GEOLOCATION_URL + "q=" + imgInfo.webinfo + "&client_id=" + seatgeek_id;
-            $.get(SEATGEEK_URL, {
+            $.get(SEATGEEK_GEOLOCATION_URL, {
                 q: searchReq
             }).fail(function (jqXHR, textStatus, errorThrown) {
                 $('#results').text('ERRORS: ' + textStatus + ' ' + errorThrown);
