@@ -64,6 +64,9 @@
     hbs.registerHelper('json', function(context) {
         return JSON.stringify(context, null, 2);
     });
+
+    // Static directory
+    app.use(express.static("public"));
     
 
     //Default HTML Route
@@ -73,7 +76,7 @@
 	});
 
 
-	//Models
+	 //Models
     var models = require("./app/models");
 
 
@@ -84,26 +87,21 @@
 
 
     //load passport strategies
-    require('./app/config/passport/passport.js')(passport,models.user);
+  
 
 
     //Sync Database
+    //Remove force after first deployment
    	models.sequelize.sync().then(function(){
     console.log('Nice! Database looks fine')
-
+      app.listen(5000, function(err){
+    if(!err)
+    console.log("Site is live"); else console.log(err)
+  require('./app/config/passport/passport.js')(passport);
+    });
     }).catch(function(err){
     console.log(err,"Something went wrong with the Database Update!")
     });
 
 
 
-	app.listen(5000, function(err){
-		if(!err)
-		console.log("Site is live"); else console.log(err)
-
-	});
-
-
-
-
-    

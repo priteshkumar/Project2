@@ -1,19 +1,30 @@
+module.exports = function(sequelize, DataTypes) {
+  var User = sequelize.define("User", {
+    username: {
+    type: DataTypes.STRING,
+    unique:true,
+    allowNull:false
+   },
+    email: {
+    type: DataTypes.STRING,
+    unique:true,
+    allowNull:false,
+    validate :{
+      isEmail:true
+    }
+   },
+    password: {
+    type:DataTypes.STRING,
+    unique:true,
+    allowNull:false,
+   }
+  });
 
-module.exports = function(sequelize, Sequelize) {
-
-  var User = sequelize.define('user', {
-    id: { autoIncrement: true, primaryKey: true, type: Sequelize.INTEGER},
-    username: {type:Sequelize.TEXT},
-    email: { type:Sequelize.STRING, validate: {isEmail:true} },
-    password : {type: Sequelize.STRING,allowNull: false }, 
-});
-
-    User.associate = function(models) {
-     User.hasMany(models.bucketlist, {
+  User.associate = function(models) {
+     User.hasMany(models.Bucketlist, {
       onDelete: "cascade"
     });
   };
 
   return User;
-
-}
+};
