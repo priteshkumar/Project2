@@ -81,3 +81,12 @@ footer.page-footer {
   color:#444444;
   text-align:center;
 }
+
+.card.large {
+  height: 700px;
+
+}
+
+.form {
+  width:30%;
+}
