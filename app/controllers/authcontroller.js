@@ -2,7 +2,7 @@ var exports = module.exports = {}
 
 
 exports.register = function(req,res){
-
+	
 	res.render('register'); 
 
 }
@@ -14,8 +14,7 @@ exports.login = function(req,res){
 }
 
 exports.profile = function(req,res){
-	console.log("login successful");
-	// res.json({"message":"profile"});
+
 	res.render('profile'); 
 
 }

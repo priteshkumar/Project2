@@ -87,7 +87,7 @@
 
 
     //load passport strategies
-    require('./app/config/passport/passport.js')(passport);
+    require('./app/config/passport/passport.js')(passport,models.User);
 
 
     //Sync Database

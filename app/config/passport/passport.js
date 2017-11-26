@@ -1,12 +1,10 @@
 
   //load bcrypt
   var bCrypt = require('bcrypt-nodejs');
-  var db = require("../../models");
-  var User = db.User;
-  module.exports = function(passport){
 
+  module.exports = function(passport,user){
 
-  // var User = user;
+  var User = user;
   var LocalStrategy = require('passport-local').Strategy;
 
 
@@ -30,7 +28,7 @@
 
        User.findOne({where: {username:username}}).then(function(user){
 
-      if(User)
+      if(user)
       {
         return done(null, false, {message : 'That username is already taken'} );
       }
@@ -84,7 +82,7 @@
 
   function(req, username, password, done) {
 
-    var User = db.User;
+    var User = user;
 
     var isValidPassword = function(userpass,password){
       return bCrypt.compareSync(password, userpass);

@@ -16,6 +16,14 @@
         <div class="nav-wrapper">
           <a href="/profile" class="brand-logo"><i class="large material-icons">airplanemode_on</i>Bucket List</a>
 
+
+
+          {{#if isAuthenticated}}
+          <ul class="right hide-on-med-and-down">
+              <li><a href="/logout">Logout</a></li>
+
+
+          {{else}}
           <ul class="right hide-on-med-and-down">
               <li><a href="/register">Register</a></li>
           </ul>
@@ -23,13 +31,7 @@
           <ul class="right hide-on-med-and-down">
               <li><a href="/login">Login</a></li>
           </ul>
-          <ul class="right hide-on-med-and-down">
-              <li><a href="/logout">Logout</a></li>
-          </ul>
-          <ul class="right hide-on-med-and-down">
-              <li><a href="/profile">profile</a></li>
-          </ul>
-
+          {{/if}}
             <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
           </div>
         </div>
