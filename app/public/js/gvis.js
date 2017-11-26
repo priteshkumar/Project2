@@ -17,7 +17,7 @@ $(function () {
 
 
 function uploadFiles(event) {
-    console.log('test');
+    console.log('loading...');
     
     event.preventDefault(); // Prevent the default form post
 
