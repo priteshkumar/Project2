@@ -1,7 +1,7 @@
 
 {{> header }}
 
-<div class="container">
+{{!-- <div class="container">
 	<h1>{{title}}</h1>
 		{{#if errors}}
 			{{#each errors}}
@@ -26,5 +26,43 @@
 		<button type="submit" class="btn btn-primary">Submit</button>
 		</form>
 
+</div> --}}
+
+
+<div class="container">
+    <div class="row center">
+        <div class="col m6">
+            <h2 class="center-align">Register</h2>
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="username" type="text" class="validate">
+                            <label for="username">Username</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="email" type="email" class="validate">
+                            <label for="email">Email</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="password" type="password" class="validate">
+                            <label for="password">Password</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col m12">
+                            <p class="right-align">
+                                <button class="btn btn-large waves-effect waves-light" type="button" name="action">Login</button>
+                            </p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
 {{> footer }}

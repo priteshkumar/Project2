@@ -3,19 +3,20 @@ var exports = module.exports = {}
 
 exports.register = function(req,res){
 
-	res.render('register', {title: 'Register'}); 
+	res.render('register'); 
 
 }
 
 exports.login = function(req,res){
 
-	res.render('login', {title:'login'}); 
+	res.render('login'); 
 
 }
 
 exports.profile = function(req,res){
-
-	res.render('profile', {title: 'profile'}); 
+	console.log("login successful");
+	// res.json({"message":"profile"});
+	res.render('profile'); 
 
 }
 

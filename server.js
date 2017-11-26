@@ -72,7 +72,7 @@
     //Default HTML Route
     app.get('/', function(req, res){
       console.log(req.user);
-	  res.render('home');
+	  res.render('login');
 	});
 
 
@@ -87,7 +87,7 @@
 
 
     //load passport strategies
-  
+    require('./app/config/passport/passport.js')(passport);
 
 
     //Sync Database
@@ -97,7 +97,7 @@
       app.listen(5000, function(err){
     if(!err)
     console.log("Site is live"); else console.log(err)
-  require('./app/config/passport/passport.js')(passport);
+
     });
     }).catch(function(err){
     console.log(err,"Something went wrong with the Database Update!")
