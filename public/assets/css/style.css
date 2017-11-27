@@ -89,4 +89,13 @@ footer.page-footer {
 
 .form {
   width:30%;
+
+  padding:10px;
+  border-radius:25px;
 }
+ 
+ .opaque{
+
+    background: rgba(0,0,0,0.7);
+
+ }
