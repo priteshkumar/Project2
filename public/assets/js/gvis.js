@@ -1,3 +1,15 @@
+
+Dropzone.options.demoUpload = {
+    init:function(){
+        this.on("drop",function(){
+            console.log("drop received on dzone");
+        });
+
+        this.on("addedfile",uploadFiles);
+        
+    }
+};
+
 var gvisapiKey = "AIzaSyA61FTMTWGKCwkTzf0IkCM78Edj9xNNoiQ";
 var GVIS_URL = 'https://vision.googleapis.com/v1/images:annotate?key=' + gvisapiKey;
 var gsearchapiKey = "AIzaSyCnfj0wY8BNRF-ycLyQIRcCdzoPH5950io";
@@ -11,19 +23,21 @@ var imgInfo = {};
 var gSearchres = {};
 var seatGeekres = {};
 
-$(function () {
-    $('#fileform').on('submit', uploadFiles);
-});
 
 
-function uploadFiles(event) {
+function removeDzonefiles(){
+    Dropzone.options.demoUpload.removeAllFiles(true);
+}
+
+
+function uploadFiles(file) {
     console.log('test');
-    
-    event.preventDefault(); // Prevent the default form post
+    //currentDzonefile = file;
+    //event.preventDefault(); // Prevent the default form post
 
     // Grab the file and asynchronously convert to base64.
 
-    var file = $('#fileform [name=fileField]')[0].files[0];
+    //var file = $('#fileform [name=fileField]')[0].files[0];
     var reader = new FileReader();
     reader.onloadend = processFile;
     reader.readAsDataURL(file);
@@ -37,7 +51,7 @@ function processFile(event) {
 
 
 function analyseinCloudVis(content) {
-    var type = $('#fileform [name=type]').val();
+    //var type = $('#fileform [name=type]').val();
 
     // Strip out the file prefix when you convert to json.
     var request = {
@@ -82,13 +96,6 @@ function analyseinCloudVis(content) {
 
 function parseResults(data) {
 
-    // console.log(data);
-    //console.log(data.responses[0]);
-    //console.log(data[0].labelAnnotations);
-
-
-
-
     var imgDesc = {};
     
     //gvisinfo  object use this for parsing gvis image info and updating ui
@@ -129,13 +136,8 @@ function parseResults(data) {
     }
 
     console.log(imgDesc);
-
-    //var dbImgdesc = Object.assign({}, imgDesc);
-    //console.log(dbImgdesc);
-    //imgInfo = dbImgdesc;
-
     var searchReq = {};
-    /* GET https://www.googleapis.com/customsearch/v1?key=INSERT_YOUR_API_KEY&cx=017576662512468239146:omuauf_lfve&q=lectures*/
+    
     if (imgDesc.landmark !== undefined && imgDesc.landmark !== null) {
         searchReq.q = imgDesc.landmark;
     } else {
@@ -195,8 +197,10 @@ function displaySearchResults(data) {
 
 
 
+
 function displayEventinfo(data) {
     console.log(data);
+//    removeDzonefiles();
 }
 
 
