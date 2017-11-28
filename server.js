@@ -96,7 +96,7 @@
     console.log('Nice! Database looks fine')
       app.listen(5000, function(err){
     if(!err)
-    console.log("Site is live"); else console.log(err)
+    console.log("Site is live at localhost:5000 "); else console.log(err)
 
     });
     }).catch(function(err){
